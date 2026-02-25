@@ -28,23 +28,23 @@ kubectl describe node <node_name>
 
 ```
 
-##  Pod Management
+#  Pod Management
 
-# Lists all pods in the current namespace
+### Lists all pods in the current namespace
 
 ```
 
 kubectl get pods
 
 ```
-# Lists pods with additional details like node name and IP addresses.
+### Lists pods with additional details like node name and IP addresses.
 
 ```
 kubectl get pods -o wide
 
 ```
 
-# Provides detailed information, events, and status of a pod.
+### Provides detailed information, events, and status of a pod.
 
 ```
 
