@@ -118,6 +118,8 @@ kubectl create -f <pod-file.yaml>
 kubectl apply -f <pod-file.yaml>
 ```
 
+---
+
 # Namespace Management Commands 
 
 Namespaces in Kubernetes provide a mechanism for isolating groups of resources within a single cluster, effectively creating "virtual clusters". Below are real-time examples of common kubectl commands used for namespace management. 
