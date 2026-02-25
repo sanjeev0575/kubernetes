@@ -44,6 +44,7 @@ kubectl get pods -o wide
 
 ```
 
+
 ### Provides detailed information, events, and status of a pod.
 
 ```
@@ -109,4 +110,12 @@ kubectl port-forward <pod-name> 8080:80
 
 ```
 kubectl delete pod <pod-name>
+```
+
+### Create a pod from a YAML file
+
+```
+kubectl create -f <pod-file.yaml>
+# or use 'apply' for declarative management
+kubectl apply -f <pod-file.yaml>
 ```
