@@ -3,10 +3,8 @@
 ## Common options and flags
 
 ```
-
 alias k=kubectl
 echo 'alias k=kubectl' >>~/.bashrc
-
 ```
 
 # Cluster Information
