@@ -97,7 +97,24 @@ kubectl logs -l 'app=my-app,tier=backend'
 ```
 kubectl top pod <pod-name>
 ```
+###  List pods Sorted by Restart Count.
 
+```
+kubectl get pods --sort-by='.status.containerStatuses[0].restartCount' 
+```
+
+### Get all running pods in the namespace.
+
+```
+kubectl get pods --field-selector=status.phase=Running 
+```
+### Execute a command against a container in a pod.
+
+```
+kubectl exec <pod_name> -c <container_name> <command>
+```
+
+### 
 ### Access an application running in a pod from your local machine via a specific local port (e.g., 8080), useful for local testing and debugging without exposing the service externally.
 
 ```
@@ -165,4 +182,28 @@ kubectl config view --minify | grep namespace
 
 ```
 curl http://api-service.backend.svc.cluster.local
+```
+
+---
+
+# Replication Controllers commands
+
+Kubernetes Replication Controllers (RC) are managed using kubectl to ensure a specified number of pod replicas run at any given time.
+
+### List ReplicaSets
+
+```
+kubectl get replicasets
+```
+
+###  Display the detailed state of one or more ReplicaSets.
+
+```
+kubectl describe replicasets <replicaset_name>
+```
+
+### Scale a ReplicaSet.
+
+```
+kubectl scale --replicas=[x]
 ```
