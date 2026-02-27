@@ -186,9 +186,9 @@ curl http://api-service.backend.svc.cluster.local
 
 ---
 
-# Replication Controllers commands
+# ReplicaSets commands
 
-Kubernetes Replication Controllers (RC) are managed using kubectl to ensure a specified number of pod replicas run at any given time.
+Kubernetes ReplicaSet (rs) commands manage the lifecycle of replicated pods, ensuring a stable set is running
 
 ### List ReplicaSets
 
