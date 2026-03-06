@@ -137,6 +137,75 @@ kubectl apply -f <pod-file.yaml>
 
 ---
 
+# Deployment 
+
+The Kubernetes kubectl command-line tool is used to manage deployments and other resources within a cluster. Key deployment commands fall into categories for creation, inspection, scaling, and rolling updates
+
+### Create a new deployment using an imperative command.
+
+```
+kubectl create deployment web --image=nginx:1.23
+```
+
+### List all deployments in the current namespace.
+
+```
+kubectl get deployments
+```
+
+### Show detailed information about a specific deployment, including status and events.
+
+```
+kubectl describe deployment web
+```
+
+### Edit a live resource definition in your default editor.
+
+```
+kubectl edit deployment web
+```
+
+### Scale the number of pod replicas to a specified count.
+
+```
+kubectl scale deployment web --replicas=5
+```
+
+### Update the container image of a deployment.
+
+```
+kubectl set image deployment/web app=nginx:1.24
+```
+
+### Check the status of a deployment rollout.
+
+```
+kubectl rollout status deployment/web
+```
+### View the revision history of a deployment.
+
+```
+kubectl rollout history deployment/web
+```
+
+### Roll back a deployment to the previous revision (or a specific revision).
+
+```
+kubectl rollout undo deployment/web
+```
+
+### Perform an ordered restart of the deployment's pods.
+
+```
+kubectl rollout restart deployment/web
+```
+
+### Delete a specific deployment and its associated pods.
+
+```
+kubectl delete deployment web
+```
+---
 # Namespace Management Commands 
 
 Namespaces in Kubernetes provide a mechanism for isolating groups of resources within a single cluster, effectively creating "virtual clusters". Below are real-time examples of common kubectl commands used for namespace management. 
