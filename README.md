@@ -276,3 +276,42 @@ kubectl describe replicasets <replicaset_name>
 ```
 kubectl scale --replicas=[x]
 ```
+
+# Services
+A Kubernetes (K8s) Service is an abstraction that defines a logical set of Pods and a policy by which to access them.
+
+### List Services
+
+```
+kubectl get svc
+```
+
+### Detailed Info
+
+```
+kubectl describe svc <service-name>
+```
+
+### Create Service
+
+```
+kubectl create service <type> <name> --tcp=<port>
+```
+
+### Expose Resource
+
+```
+kubectl expose deployment <name> --port=80 --type=LoadBalancer
+```
+
+### Edit Service
+
+```
+kubectl edit svc <service-name>
+```
+
+### Delete Service
+
+```
+kubectl delete svc <service-name>
+```
