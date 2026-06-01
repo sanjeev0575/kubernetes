@@ -316,7 +316,7 @@ kubectl edit svc <service-name>
 kubectl delete svc <service-name>
 ```
 ## Your app is running but the Service is not routing traffic. How do you debug?
-###  1. Check if endpoints are populated
+### Check if endpoints are populated
 
 ```
 kubectl get endpoints my-service
