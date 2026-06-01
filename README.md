@@ -315,3 +315,33 @@ kubectl edit svc <service-name>
 ```
 kubectl delete svc <service-name>
 ```
+## Your app is running but the Service is not routing traffic. How do you debug?
+###  1. Check if endpoints are populated
+
+```
+kubectl get endpoints my-service
+```
+
+### Check label selector matches pods
+
+```
+kubectl get pods --show-labels
+```
+
+###  Check pod is Running and Ready
+
+```
+kubectl get pods
+```
+
+### Test from inside the cluster
+
+```
+kubectl exec -it <pod> -- curl http://my-service:80
+```
+
+### Check service port vs container port
+
+```
+kubectl describe svc my-service
+```
